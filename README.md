@@ -6,3 +6,4 @@
 - 📫 How to reach me: discord: @Марина(golubeva-webmaster)#6584.
 - 😄 CV: https://golubeva-webmaster.github.io/rsschool-cv/
 - 😄 Portfolio: https://github.com/golubeva-webmaster/Portfolio
+- Last sertificate: https://app.rs.school/certificate/qm2m5pdc
