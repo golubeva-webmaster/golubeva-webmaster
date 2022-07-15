@@ -190,7 +190,7 @@ declare module "*.vue" {
 }
 ```
 
-** Specify in the nuxt configuration where to get the components **
+**Specify in the nuxt configuration where to get the components**
 
 In `nuxt.config.ts` specify the folder where to get the modules from. Now we have not only the components folder, as it was before we created our own module, but also `modules/commonModule/components/lib`.
 That is, in `nuxt.config.ts` it was like this:
