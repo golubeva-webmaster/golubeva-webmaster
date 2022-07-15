@@ -7,4 +7,4 @@
 - 😄 CV: https://golubeva-webmaster.github.io/rsschool-cv/
 - 💼 Portfolio: https://github.com/golubeva-webmaster/Portfolio
 
-(And welcome to my blog)[https://golubeva-webmaster.github.io/golubeva-webmaster/]
+[And welcome to my blog](https://golubeva-webmaster.github.io/golubeva-webmaster/)
