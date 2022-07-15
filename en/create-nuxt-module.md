@@ -13,7 +13,7 @@
 Name: commonModule
 Entry point: modules/commonModule/index.ts
 
-### Глобальные параметры
+### Global module options
 Let's tell nuxt about the new module and set the global options in nuxt.config.ts:
 ```ts
 modules: [
