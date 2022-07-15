@@ -143,6 +143,37 @@ this.$nuxt.$options.$capitalize(‘test’)
 
 Я не буду переписывать описание создания компонентов, оно отлично описано в указанных источниках. Ниже моменты, которые помогли мне.
 
+В моем случае это было не создание компонентов и плагинов "с нуля". А перенос ранее написанного кода в nuxt модуль. Поэтому следовало сделать так:
+- Избавиться в компоненте от данных, которые приходят из стора.  Путем переноса их в родительский компонент. Параметры дочернего и родительского компонентов связываем при помощи декоратора .sync
+- Перенести полученный компонент в modules/commonModule/components/lib
+
+**Использование .sync**
+
+Родитель:
+```html
+<file-manager :sort-by.sync="sortBy" />
+```
+```ts 
+ get sortBy () {
+   return this.$store.state.gui.gcodefiles.sortBy
+ }
+ 
+ set sortBy (newVal) {
+   if (newVal === undefined) newVal = "modified"
+ 
+   this.$store.dispatch('gui/saveSetting', { name: "gcodefiles.sortBy", value: newVal })
+ }
+ ```
+
+Дочерний
+```ts
+@PropSync('sortBy') sortBySync!: string
+```
+
+В разметке и коде используем sortBySync
+
+**Декларирование**
+
 Без этого блока нельзя будет вставлять компоненты нашего модуля на страницы *.vue
 Чтобы в TypoScript можно было импортировать .vue файлы. Например так:
 `modules/commonModule/components/lib/index.ts`
