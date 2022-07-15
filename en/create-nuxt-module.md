@@ -142,6 +142,37 @@ The plugin defined in this way `modules/commonModule/plugins/helpers/helpers.ts`
 
 I will not rewrite the description of creating components, it is perfectly described in the indicated sources. Below are the points that helped me.
 
+In my case, it was not creating components and plugins from scratch. And the transfer of previously written code to the nuxt module. So you should have done this:
+- Get rid of the data that comes from the store in the component. By transferring them to the parent component. We bind the parameters of the child and parent components using the .sync decorator
+- Move the resulting component to modules/commonModule/components/lib
+
+**Using .sync**
+
+Parent:
+```html
+<file-manager :sort-by.sync="sortBy" />
+```
+```ts
+ get sortBy() {
+   return this.$store.state.gui.gcodefiles.sortBy
+ }
+ 
+ set sortBy(newVal) {
+   if (newVal === undefined) newVal = "modified"
+ 
+   this.$store.dispatch('gui/saveSetting', { name: "gcodefiles.sortBy", value: newVal })
+ }
+ ```
+
+Child:
+```ts
+@PropSync('sortBy') sortBySync!: string
+```
+
+In the markup and code of the child component (the component that we transfer to the nuxt module), we use sortBySync
+
+**Declaration**
+
 Without this block, it will not be possible to insert the components of our module into *.vue pages
 So that TypoScript can import .vue files. For example like this:
 `modules/commonModule/components/lib/index.ts`
