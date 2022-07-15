@@ -165,12 +165,12 @@ this.$nuxt.$options.$capitalize(‘test’)
  }
  ```
 
-Дочерний
+Дочерний:
 ```ts
 @PropSync('sortBy') sortBySync!: string
 ```
 
-В разметке и коде используем sortBySync
+В разметке и коде дочернего компонента (компонента, который переносим в nuxt модуль) используем sortBySync
 
 **Декларирование**
 
