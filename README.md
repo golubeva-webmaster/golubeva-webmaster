@@ -1,9 +1,9 @@
 ### Hi there 👋
 
 - 🔭 I’m currently working Frontent developer.
-- 🌱 My stack is: Vue, Vuex, Vue-router, Vuetify, Nuxt, TypoScript, ext...
-- 🤔 I’m open to getting the middle/middle+ role.
-- 📫 How to reach me: discord: @Марина(golubeva-webmaster)#6584.
+- 🌱 My stack is: Vue2/Vuex/Vuetify, Vue3/Pinia/Quasar, Vue-router, Nuxt, TypoScript, ext...
+- 🤔 I’m open to getting the middle+ role.
+- 📫 How to reach me: 8-961-07-333-65, golubeva.webmaster@gmail.com
 - 😄 CV: https://golubeva-webmaster.github.io/rsschool-cv/
 - 💼 Portfolio: https://github.com/golubeva-webmaster/Portfolio
 
